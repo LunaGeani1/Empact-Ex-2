@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed Items</title>
+</head>
+<body>
+<h1>Feed Items</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date Published</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${feedItems}">
+        <td th:text="${item.title}"></td>
+        <td th:text="${item.description}"></td>
+        <td th:text="${item.pubDate}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>>
